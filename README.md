@@ -1,27 +1,114 @@
-# EAgenda
+# eAgenda
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
+[![Stack](https://skillicons.dev/icons?i=dotnet,cs,postman,nodejs,typescript,angular,cypress&perline=8)](https://skillicons.dev)
 
-## Development server
+## Projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Desenvolvido durante o curso Full-Stack da [Academia do Programador](https://www.academiadoprogramador.net) 2024
 
-## Code scaffolding
+---
+## Descrição
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+José Pedro gosta de participar em eventos, palestras e congressos de tecnologia. E depois de horas de networking é normal ele voltar para casa com vários cartões com contatos de seus novos colegas. É bastante comum ele deixar estes cartões guardados, que podem ser esquecidos no fundo de uma gaveta...
 
-## Build
+Para isto, será necessário fazer uma gestão de contatos inteligente e JP pretende fazer isso utilizando um sistema.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
+## Funcionalidades
 
-## Running unit tests
+1. O cadastro do **Contato** consiste de:
+	- nome
+	- email
+	- telefone
+	- cargo
+	- empresa
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. O cadastro do **Compromisso** consiste de:
+	- assunto
+	- data
+	- hora de início
+	- hora de término
+	- local (caso presencial)
+	- link (caso remoto)
+	- contato (opcional)
 
-## Running end-to-end tests
+3. O cadastro do **Tarefa** consiste de:
+	- título
+	- prioridade
+	- data de criação
+	- data de conclusão
+	- itens
+	- percentual concluído
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+	3.1. **Item da Tarefa**
+	- título
+	- concluído (status)
+	- tarefa
 
-## Further help
+4. O cadastro do **Categoria** consiste de:
+	- título
+	- despesas
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+	4.1. Deverá ser possível visualizar todas as **despesas pertencentes a uma categoria**
+
+5. O cadastro de **Despesa** consiste de:
+	- descrição
+	- valor
+	- forma de pagamento
+	- categorias (várias)
+
+---
+## Entregáveis:
+
+1. **Aplicação Angular** com as implementações das funcionalidades principais listadas acima, com a possibilidade de **listar**, **cadastrar**, **editar** e **excluir** em todas elas.
+2. **Autenticação e Autorização** implementadas em todos os módulos de funcionalidade.
+3. **Testes e2e** com Cypress para as funcionalidades de CRUD dos módulos de funcionalidade e autenticação.
+
+---
+## Requisitos para Execução
+
+- .NET SDK (recomendado .NET 8.0 ou superior) para compilação e execução do projeto back-end.
+- Node.js v20+
+- Angular v18 
+
+---
+## Executando o Back-End 
+
+Vá para a pasta do projeto da WebAPI:
+
+```bash
+cd server/eAgenda.WebApi
+```
+
+Execute o projeto:
+
+```bash
+dotnet run
+```
+
+A API poderá ser acessada no endereço `https://localhost:4300/api`.
+
+A documentação **OpenAPI** também estará disponível em: `https://localhost:4300/swagger`.
+
+---
+## Executando o Front-End 
+
+Vá para a pasta do projeto Angular:
+
+```bash
+cd client
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute o projeto:
+
+```bash
+npm start
+```
+
+A aplicação está disponível no endereço `http://localhost:4200`.
