@@ -1,29 +1,18 @@
-import { NgIf, NgForOf } from '@angular/common';
-import { Component } from '@angular/core';
-import {
-  FormArray,
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { Router, RouterLink } from '@angular/router';
-import {
-  InserirTarefaViewModel,
-  PrioridadeTarefaEnum,
-  TarefaInseridaViewModel,
-} from '../models/tarefa.models';
-import { NotificacaoService } from '../../../core/notificacao/notificacao.service';
-import { TarefaService } from '../services/tarefa.service';
+import {NgForOf, NgIf} from '@angular/common';
+import {Component} from '@angular/core';
+import {FormArray, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators,} from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {Router, RouterLink} from '@angular/router';
+import {InserirTarefaViewModel, PrioridadeTarefaEnum, TarefaInseridaViewModel,} from '../models/tarefa.models';
+import {NotificacaoService} from '../../../core/notificacao/notificacao.service';
+import {TarefaService} from '../services/tarefa.service';
 
 @Component({
   selector: 'app-cadastro-tarefa',

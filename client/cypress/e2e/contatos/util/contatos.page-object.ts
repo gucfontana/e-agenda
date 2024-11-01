@@ -20,12 +20,12 @@ export class ContatosPageObject {
   }
 
   public inserirContato({
-    nome = 'Teste do Cypress',
-    email = 'testador@cypress.com',
-    telefone = '49 99999-0000',
-    empresa = 'Cypress',
-    cargo = 'Testador',
-  } = {}) {
+                          nome = 'Teste do Cypress',
+                          email = 'testador@cypress.com',
+                          telefone = '49 99999-0000',
+                          empresa = 'Cypress',
+                          cargo = 'Testador',
+                        } = {}) {
     cy.get('[data-cy=novoRegistro]').click();
 
     if (nome) this.nome.type(nome);

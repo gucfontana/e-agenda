@@ -1,14 +1,14 @@
-import { NgIf, NgForOf, AsyncPipe, DatePipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatIconModule } from '@angular/material/icon';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { PrioridadeTarefaEnum, VisualizarTarefaViewModel } from '../models/tarefa.models';
-import { NotificacaoService } from '../../../core/notificacao/notificacao.service';
-import { TarefaService } from '../services/tarefa.service';
+import {AsyncPipe, DatePipe, NgForOf, NgIf} from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {ActivatedRoute, Router, RouterLink} from '@angular/router';
+import {PrioridadeTarefaEnum, VisualizarTarefaViewModel} from '../models/tarefa.models';
+import {NotificacaoService} from '../../../core/notificacao/notificacao.service';
+import {TarefaService} from '../services/tarefa.service';
 
 @Component({
   selector: 'app-exclusao-tarefa',
@@ -35,7 +35,8 @@ export class ExclusaoTarefaComponent implements OnInit {
     private router: Router,
     private tarefaService: TarefaService,
     private notificacaoService: NotificacaoService
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.detalhesTarefa = this.route.snapshot.data['tarefa'];

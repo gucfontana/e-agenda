@@ -32,7 +32,8 @@ export interface ContatoEditadoViewModel {
   cargo: string;
 }
 
-export interface ContatoExcluidoViewModel {}
+export interface ContatoExcluidoViewModel {
+}
 
 export interface ListarContatoViewModel {
   id: string;

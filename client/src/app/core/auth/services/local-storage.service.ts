@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { TokenViewModel } from '../models/auth.models';
+import {Injectable} from '@angular/core';
+import {TokenViewModel} from '../models/auth.models';
 
 @Injectable()
 export class LocalStorageService {

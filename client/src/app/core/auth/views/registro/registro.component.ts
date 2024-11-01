@@ -1,24 +1,16 @@
-import { NgIf } from '@angular/common';
-import { Component } from '@angular/core';
-import {
-  FormBuilder,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { AuthService } from '../../services/auth.service';
-import {
-  RegistrarUsuarioViewModel,
-  TokenViewModel,
-} from '../../models/auth.models';
-import { Router, RouterLink } from '@angular/router';
-import { UsuarioService } from '../../services/usuario.service';
-import { NotificacaoService } from '../../../notificacao/notificacao.service';
-import { LocalStorageService } from '../../services/local-storage.service';
+import {NgIf} from '@angular/common';
+import {Component} from '@angular/core';
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators,} from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {AuthService} from '../../services/auth.service';
+import {RegistrarUsuarioViewModel, TokenViewModel,} from '../../models/auth.models';
+import {Router, RouterLink} from '@angular/router';
+import {UsuarioService} from '../../services/usuario.service';
+import {NotificacaoService} from '../../../notificacao/notificacao.service';
+import {LocalStorageService} from '../../services/local-storage.service';
 
 @Component({
   selector: 'app-registro',

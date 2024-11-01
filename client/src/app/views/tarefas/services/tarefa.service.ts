@@ -1,22 +1,23 @@
-import { Injectable } from '@angular/core';
-import { environment } from '../../../../environments/environment';
-import { HttpClient } from '@angular/common/http';
-import { map, catchError, Observable, of, EMPTY, throwError } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {environment} from '../../../../environments/environment';
+import {HttpClient} from '@angular/common/http';
+import {catchError, EMPTY, map, Observable, of, throwError} from 'rxjs';
 import {
-  InserirTarefaViewModel,
-  TarefaInseridaViewModel,
   EditarTarefaViewModel,
+  InserirTarefaViewModel,
+  ListarTarefaViewModel,
   TarefaEditadaViewModel,
   TarefaExcluidaViewModel,
-  ListarTarefaViewModel,
+  TarefaInseridaViewModel,
   VisualizarTarefaViewModel,
 } from '../models/tarefa.models';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class TarefaService {
   private readonly url: string = `${environment.apiUrl}/tarefas`;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   public inserir(registro: InserirTarefaViewModel) {
     return this.http

@@ -3,7 +3,7 @@
     <div class="col col-md-10 col-lg-6">
       <h1 class="display-3">Registro de Usuário</h1>
 
-      <hr />
+      <hr/>
 
       <form [formGroup]="form" (submit)="registrar()">
         <mat-form-field class="w-100 mt-5" appearance="fill">
@@ -18,10 +18,10 @@
           <mat-icon matSuffix color="primary">person</mat-icon>
           <mat-error class="text-white" *ngIf="nome?.invalid">
             <span *ngIf="nome?.errors?.['required']"
-              >O nome precisa ser preenchido.</span
+            >O nome precisa ser preenchido.</span
             >
             <span *ngIf="nome?.errors?.['minlength']"
-              >O nome deve conter ao menos 3 caracteres.</span
+            >O nome deve conter ao menos 3 caracteres.</span
             >
           </mat-error>
         </mat-form-field>
@@ -38,10 +38,10 @@
           <mat-icon matSuffix color="primary">login</mat-icon>
           <mat-error class="text-white" *ngIf="nome?.invalid">
             <span *ngIf="nome?.errors?.['required']"
-              >O nome precisa ser preenchido.</span
+            >O nome precisa ser preenchido.</span
             >
             <span *ngIf="nome?.errors?.['minlength']"
-              >O nome deve conter ao menos 3 caracteres.</span
+            >O nome deve conter ao menos 3 caracteres.</span
             >
           </mat-error>
         </mat-form-field>
@@ -59,10 +59,10 @@
           <mat-icon matSuffix color="primary">mail</mat-icon>
           <mat-error class="text-white" *ngIf="email?.invalid">
             <span *ngIf="email?.errors?.['email']"
-              >O email precisa seguir o formato "usuario&#64;dominio.com".</span
+            >O email precisa seguir o formato "usuario&#64;dominio.com".</span
             >
             <span *ngIf="email?.errors?.['required']"
-              >O email precisa ser preenchido.</span
+            >O email precisa ser preenchido.</span
             >
           </mat-error>
         </mat-form-field>
@@ -80,10 +80,10 @@
           <mat-icon matSuffix color="primary">password</mat-icon>
           <mat-error class="text-white" *ngIf="senha?.invalid">
             <span *ngIf="senha?.errors?.['required']"
-              >A senha precisa ser preenchida.</span
+            >A senha precisa ser preenchida.</span
             >
             <span *ngIf="senha?.errors?.['minlength']"
-              >A senha deve conter ao menos 6 caracteres.</span
+            >A senha deve conter ao menos 6 caracteres.</span
             >
           </mat-error>
         </mat-form-field>

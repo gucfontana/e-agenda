@@ -1,7 +1,7 @@
-import { inject } from "@angular/core";
-import { ResolveFn, ActivatedRouteSnapshot } from "@angular/router";
-import { VisualizarDespesaViewModel } from "../models/despesa.models";
-import { DespesaService } from "./despesa.service";
+import {inject} from "@angular/core";
+import {ActivatedRouteSnapshot, ResolveFn} from "@angular/router";
+import {VisualizarDespesaViewModel} from "../models/despesa.models";
+import {DespesaService} from "./despesa.service";
 
 export const visualizarDespesaResolver: ResolveFn<VisualizarDespesaViewModel> = (
   route: ActivatedRouteSnapshot

@@ -1,13 +1,13 @@
-import { NgIf, NgForOf, AsyncPipe, DatePipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { NotificacaoService } from '../../../core/notificacao/notificacao.service';
-import { DespesaService } from '../services/despesa.service';
-import { FormaPgtoDespesaEnum, VisualizarDespesaViewModel } from '../models/despesa.models';
+import {AsyncPipe, DatePipe, NgForOf, NgIf} from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {ActivatedRoute, Router, RouterLink} from '@angular/router';
+import {NotificacaoService} from '../../../core/notificacao/notificacao.service';
+import {DespesaService} from '../services/despesa.service';
+import {FormaPgtoDespesaEnum, VisualizarDespesaViewModel} from '../models/despesa.models';
 
 @Component({
   selector: 'app-exclusao-despesa',
@@ -33,7 +33,8 @@ export class ExclusaoDespesaComponent implements OnInit {
     private router: Router,
     private despesaService: DespesaService,
     private notificacaoService: NotificacaoService
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.detalhesDespesa = this.route.snapshot.data['despesa'];

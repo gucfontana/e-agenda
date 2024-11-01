@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { UsuarioTokenViewModel } from '../models/auth.models';
-import { BehaviorSubject } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {UsuarioTokenViewModel} from '../models/auth.models';
+import {BehaviorSubject} from 'rxjs';
 
 @Injectable()
 export class UsuarioService {

@@ -1,12 +1,12 @@
-import { ActivatedRouteSnapshot, ResolveFn, Routes } from '@angular/router';
-import { VisualizarCategoriaViewModel } from './models/categoria.models';
-import { inject } from '@angular/core';
-import { CategoriaService } from './services/categoria.service';
-import { ListagemCategoriasComponent } from './listar/listagem-categorias.component';
-import { CadastroCategoriaComponent } from './cadastrar/cadastro-categoria.component';
-import { EdicaoCategoriaComponent } from './editar/edicao-categoria.component';
-import { ExclusaoCategoriaComponent } from './excluir/exclusao-categoria.component';
-import { listagemCategoriasResolver } from './services/listagem-categorias.resolver';
+import {ActivatedRouteSnapshot, ResolveFn, Routes} from '@angular/router';
+import {VisualizarCategoriaViewModel} from './models/categoria.models';
+import {inject} from '@angular/core';
+import {CategoriaService} from './services/categoria.service';
+import {ListagemCategoriasComponent} from './listar/listagem-categorias.component';
+import {CadastroCategoriaComponent} from './cadastrar/cadastro-categoria.component';
+import {EdicaoCategoriaComponent} from './editar/edicao-categoria.component';
+import {ExclusaoCategoriaComponent} from './excluir/exclusao-categoria.component';
+import {listagemCategoriasResolver} from './services/listagem-categorias.resolver';
 
 const visualizarCategoriaResolver: ResolveFn<VisualizarCategoriaViewModel> = (
   route: ActivatedRouteSnapshot
@@ -25,7 +25,7 @@ export const categoriasRoutes: Routes = [
   {
     path: 'listar',
     component: ListagemCategoriasComponent,
-    resolve: { categorias: listagemCategoriasResolver },
+    resolve: {categorias: listagemCategoriasResolver},
   },
   {
     path: 'cadastrar',
@@ -34,11 +34,11 @@ export const categoriasRoutes: Routes = [
   {
     path: 'editar/:id',
     component: EdicaoCategoriaComponent,
-    resolve: { categoria: visualizarCategoriaResolver },
+    resolve: {categoria: visualizarCategoriaResolver},
   },
   {
     path: 'excluir/:id',
     component: ExclusaoCategoriaComponent,
-    resolve: { categoria: visualizarCategoriaResolver },
+    resolve: {categoria: visualizarCategoriaResolver},
   },
 ];

@@ -1,18 +1,15 @@
-import { Injectable } from '@angular/core';
-import { environment } from '../../../../environments/environment';
-import { catchError, map, Observable, tap, throwError } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
-import {
-  AutenticarUsuarioViewModel,
-  RegistrarUsuarioViewModel,
-  TokenViewModel,
-} from '../models/auth.models';
+import {Injectable} from '@angular/core';
+import {environment} from '../../../../environments/environment';
+import {catchError, map, Observable, throwError} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {AutenticarUsuarioViewModel, RegistrarUsuarioViewModel, TokenViewModel,} from '../models/auth.models';
 
 @Injectable()
 export class AuthService {
   private apiUrl: string = environment.apiUrl;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   public registrar(
     registro: RegistrarUsuarioViewModel

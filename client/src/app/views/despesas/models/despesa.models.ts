@@ -36,7 +36,8 @@ export interface DespesaEditadaViewModel {
   categoriasSelecionadas: string[];
 }
 
-export interface DespesaExcluidaViewModel {}
+export interface DespesaExcluidaViewModel {
+}
 
 export interface ListarDespesaViewModel {
   id: string;

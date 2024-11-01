@@ -1,4 +1,4 @@
-import { ListarContatoViewModel } from '../../contatos/models/contato.models';
+import {ListarContatoViewModel} from '../../contatos/models/contato.models';
 
 export enum TipoLocalizacaoCompromissoEnum {
   Remoto,
@@ -49,7 +49,8 @@ export interface CompromissoEditadoViewModel {
   contatoId?: string;
 }
 
-export interface CompromissoExcluidoViewModel {}
+export interface CompromissoExcluidoViewModel {
+}
 
 export interface ListarCompromissoViewModel {
   id: string;

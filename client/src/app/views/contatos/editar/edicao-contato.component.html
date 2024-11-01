@@ -3,7 +3,7 @@
     <div class="col col-md-10 col-lg-6">
       <h1 class="display-3">Edição de Contato</h1>
 
-      <hr />
+      <hr/>
 
       <form [formGroup]="form" (submit)="gravar()">
         <mat-form-field class="w-100 mt-5" appearance="fill">
@@ -19,10 +19,10 @@
           <mat-icon matSuffix color="primary">person</mat-icon>
           <mat-error class="text-white" *ngIf="nome?.invalid">
             <span *ngIf="nome?.errors?.['required']"
-              >O nome precisa ser preenchido.</span
+            >O nome precisa ser preenchido.</span
             >
             <span *ngIf="nome?.errors?.['minlength']"
-              >O nome deve conter ao menos 3 caracteres.</span
+            >O nome deve conter ao menos 3 caracteres.</span
             >
           </mat-error>
         </mat-form-field>
@@ -40,10 +40,10 @@
           <mat-icon matSuffix color="primary">mail</mat-icon>
           <mat-error class="text-white" *ngIf="email?.invalid">
             <span *ngIf="email?.errors?.['required']"
-              >O email precisa ser preenchido.</span
+            >O email precisa ser preenchido.</span
             >
             <span *ngIf="email?.errors?.['email']"
-              >O valor informado não segue um padrão de email.</span
+            >O valor informado não segue um padrão de email.</span
             >
           </mat-error>
         </mat-form-field>
@@ -60,10 +60,10 @@
           <mat-icon matSuffix color="primary">phone</mat-icon>
           <mat-error class="text-white" *ngIf="telefone?.invalid">
             <span *ngIf="telefone?.errors?.['required']"
-              >O telefone precisa ser preenchido.</span
+            >O telefone precisa ser preenchido.</span
             >
             <span *ngIf="telefone?.errors?.['pattern']"
-              >O valor informado não segue o padrão (00) 90000-0000.</span
+            >O valor informado não segue o padrão (00) 90000-0000.</span
             >
           </mat-error>
         </mat-form-field>
@@ -81,10 +81,10 @@
           <mat-icon matSuffix color="primary">corporate_fare</mat-icon>
           <mat-error class="text-white" *ngIf="empresa?.invalid">
             <span *ngIf="empresa?.errors?.['required']"
-              >A empresa precisa ser preenchida.</span
+            >A empresa precisa ser preenchida.</span
             >
             <span *ngIf="empresa?.errors?.['minlength']"
-              >A empresa deve conter ao menos 3 caracteres.</span
+            >A empresa deve conter ao menos 3 caracteres.</span
             >
           </mat-error>
         </mat-form-field>
@@ -102,10 +102,10 @@
           <mat-icon matSuffix color="primary">work</mat-icon>
           <mat-error class="text-white" *ngIf="cargo?.invalid">
             <span *ngIf="cargo?.errors?.['required']"
-              >O cargo precisa ser preenchido.</span
+            >O cargo precisa ser preenchido.</span
             >
             <span *ngIf="cargo?.errors?.['minlength']"
-              >O cargo deve conter ao menos 3 caracteres.</span
+            >O cargo deve conter ao menos 3 caracteres.</span
             >
           </mat-error>
         </mat-form-field>

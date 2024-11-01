@@ -1,14 +1,13 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { NotificacaoService } from '../../../core/notificacao/notificacao.service';
-import { ContatoService } from '../../contatos/services/contato.service';
-import { VisualizarCompromissoViewModel } from '../models/compromisso.models';
-import { CompromissoService } from '../services/compromisso.service';
-import { NgIf, NgForOf, AsyncPipe } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { MatTooltipModule } from '@angular/material/tooltip';
+import {Component} from '@angular/core';
+import {ActivatedRoute, Router, RouterLink} from '@angular/router';
+import {NotificacaoService} from '../../../core/notificacao/notificacao.service';
+import {VisualizarCompromissoViewModel} from '../models/compromisso.models';
+import {CompromissoService} from '../services/compromisso.service';
+import {AsyncPipe, NgForOf, NgIf} from '@angular/common';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-exclusao-compromisso',
@@ -33,7 +32,8 @@ export class ExclusaoCompromissoComponent {
     private router: Router,
     private compromissoService: CompromissoService,
     private notificacaoService: NotificacaoService
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.detalhesCompromisso = this.route.snapshot.data['compromisso'];

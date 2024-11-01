@@ -1,27 +1,20 @@
-import { NgIf, NgForOf } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import {NgForOf, NgIf} from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators,} from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {ActivatedRoute, Router, RouterLink} from '@angular/router';
+import {NotificacaoService} from '../../../core/notificacao/notificacao.service';
+import {ListarContatoViewModel} from '../../contatos/models/contato.models';
 import {
-  FormBuilder,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { NotificacaoService } from '../../../core/notificacao/notificacao.service';
-import { ListarContatoViewModel } from '../../contatos/models/contato.models';
-import {
-  TipoLocalizacaoCompromissoEnum,
-  InserirCompromissoViewModel,
-  CompromissoInseridoViewModel,
-  EditarCompromissoViewModel,
   CompromissoEditadoViewModel,
+  EditarCompromissoViewModel,
+  TipoLocalizacaoCompromissoEnum,
 } from '../models/compromisso.models';
-import { CompromissoService } from '../services/compromisso.service';
+import {CompromissoService} from '../services/compromisso.service';
 
 @Component({
   selector: 'app-edicao-compromisso',

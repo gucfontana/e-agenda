@@ -1,4 +1,4 @@
-import { ContatosPageObject } from './util/contatos.page-object';
+import {ContatosPageObject} from './util/contatos.page-object';
 
 describe('Ao navegar para a Exclusão de Contato', () => {
   const pageObject = new ContatosPageObject();

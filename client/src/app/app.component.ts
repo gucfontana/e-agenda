@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
-import { ShellComponent } from './core/shell/shell.component';
-import { Observable } from 'rxjs';
-import { UsuarioTokenViewModel } from './core/auth/models/auth.models';
-import { AsyncPipe } from '@angular/common';
-import { UsuarioService } from './core/auth/services/usuario.service';
-import { NotificacaoService } from './core/notificacao/notificacao.service';
-import { LocalStorageService } from './core/auth/services/local-storage.service';
-import { AuthService } from './core/auth/services/auth.service';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AuthInterceptor } from './core/auth/services/auth.interceptor';
+import {Component, OnInit} from '@angular/core';
+import {Router, RouterOutlet} from '@angular/router';
+import {ShellComponent} from './core/shell/shell.component';
+import {Observable} from 'rxjs';
+import {UsuarioTokenViewModel} from './core/auth/models/auth.models';
+import {AsyncPipe} from '@angular/common';
+import {UsuarioService} from './core/auth/services/usuario.service';
+import {NotificacaoService} from './core/notificacao/notificacao.service';
+import {LocalStorageService} from './core/auth/services/local-storage.service';
+import {AuthService} from './core/auth/services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +24,8 @@ export class AppComponent implements OnInit {
     private usuarioService: UsuarioService,
     private notificacaoService: NotificacaoService,
     private localStorageService: LocalStorageService
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.usuarioAutenticado$ = this.usuarioService.usuarioAutenticado;

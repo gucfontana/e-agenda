@@ -41,7 +41,8 @@ export interface TarefaEditadaViewModel {
   itens: ItemTarefaViewModel[];
 }
 
-export interface TarefaExcluidaViewModel {}
+export interface TarefaExcluidaViewModel {
+}
 
 export interface ListarTarefaViewModel {
   id: string;

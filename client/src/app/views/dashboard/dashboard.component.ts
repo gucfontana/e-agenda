@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-import { MatButton, MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { RouterLink } from '@angular/router';
-import { NgForOf } from '@angular/common';
-import { MatDividerModule } from '@angular/material/divider';
-import { ItemRedirectDashboard } from './models/item-redirect-dashboard.model';
+import {Component} from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
+import {RouterLink} from '@angular/router';
+import {NgForOf} from '@angular/common';
+import {MatDividerModule} from '@angular/material/divider';
+import {ItemRedirectDashboard} from './models/item-redirect-dashboard.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -23,10 +23,10 @@ import { ItemRedirectDashboard } from './models/item-redirect-dashboard.model';
 })
 export class DashboardComponent {
   itensRedirect: ItemRedirectDashboard[] = [
-    { rota: '/contatos', texto: 'Contatos', icone: 'people' },
-    { rota: '/compromissos', texto: 'Compromissos', icone: 'event' },
-    { rota: '/categorias', texto: 'Categorias', icone: 'bookmarks' },
-    { rota: '/despesas', texto: 'Despesas', icone: 'currency_exchange' },
-    { rota: '/tarefas', texto: 'Tarefas', icone: 'task_alt' },
+    {rota: '/contatos', texto: 'Contatos', icone: 'people'},
+    {rota: '/compromissos', texto: 'Compromissos', icone: 'event'},
+    {rota: '/categorias', texto: 'Categorias', icone: 'bookmarks'},
+    {rota: '/despesas', texto: 'Despesas', icone: 'currency_exchange'},
+    {rota: '/tarefas', texto: 'Tarefas', icone: 'task_alt'},
   ];
 }

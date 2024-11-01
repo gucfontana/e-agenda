@@ -1,22 +1,23 @@
-import { Injectable } from '@angular/core';
-import { environment } from '../../../../environments/environment';
-import { HttpClient } from '@angular/common/http';
-import { map, catchError, Observable, of, EMPTY, throwError } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {environment} from '../../../../environments/environment';
+import {HttpClient} from '@angular/common/http';
+import {catchError, EMPTY, map, Observable, of, throwError} from 'rxjs';
 import {
-  InserirDespesaViewModel,
-  DespesaInseridaViewModel,
-  EditarDespesaViewModel,
   DespesaEditadaViewModel,
   DespesaExcluidaViewModel,
+  DespesaInseridaViewModel,
+  EditarDespesaViewModel,
+  InserirDespesaViewModel,
   ListarDespesaViewModel,
   VisualizarDespesaViewModel,
 } from '../models/despesa.models';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class DespesaService {
   private readonly url: string = `${environment.apiUrl}/despesas`;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   public inserir(registro: InserirDespesaViewModel) {
     return this.http

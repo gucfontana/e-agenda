@@ -1,14 +1,23 @@
-import { Injectable } from "@angular/core";
-import { environment } from "../../../../environments/environment";
-import { HttpClient } from "@angular/common/http";
-import { map, catchError, Observable, of, EMPTY, throwError } from "rxjs";
-import { InserirCategoriaViewModel, CategoriaInseridaViewModel, EditarCategoriaViewModel, CategoriaEditadaViewModel, CategoriaExcluidaViewModel, ListarCategoriaViewModel, VisualizarCategoriaViewModel } from "../models/categoria.models";
+import {Injectable} from "@angular/core";
+import {environment} from "../../../../environments/environment";
+import {HttpClient} from "@angular/common/http";
+import {catchError, EMPTY, map, Observable, of, throwError} from "rxjs";
+import {
+  CategoriaEditadaViewModel,
+  CategoriaExcluidaViewModel,
+  CategoriaInseridaViewModel,
+  EditarCategoriaViewModel,
+  InserirCategoriaViewModel,
+  ListarCategoriaViewModel,
+  VisualizarCategoriaViewModel
+} from "../models/categoria.models";
 
-@Injectable({ providedIn: 'root'})
+@Injectable({providedIn: 'root'})
 export class CategoriaService {
   private readonly url: string = `${environment.apiUrl}/categorias`;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   public inserir(registro: InserirCategoriaViewModel) {
     return this.http

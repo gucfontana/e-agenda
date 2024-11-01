@@ -1,26 +1,16 @@
-import { NgIf, NgForOf } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import {
-  FormArray,
-  FormBuilder,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import {
-  DespesaEditadaViewModel,
-  EditarDespesaViewModel,
-  FormaPgtoDespesaEnum,
-} from '../models/despesa.models';
-import { NotificacaoService } from '../../../core/notificacao/notificacao.service';
-import { ListarCategoriaViewModel } from '../../categorias/models/categoria.models';
-import { DespesaService } from '../services/despesa.service';
+import {NgForOf, NgIf} from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {FormArray, FormBuilder, FormGroup, ReactiveFormsModule, Validators,} from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {ActivatedRoute, Router, RouterLink} from '@angular/router';
+import {DespesaEditadaViewModel, EditarDespesaViewModel, FormaPgtoDespesaEnum,} from '../models/despesa.models';
+import {NotificacaoService} from '../../../core/notificacao/notificacao.service';
+import {ListarCategoriaViewModel} from '../../categorias/models/categoria.models';
+import {DespesaService} from '../services/despesa.service';
 
 @Component({
   selector: 'app-edicao-despesa',

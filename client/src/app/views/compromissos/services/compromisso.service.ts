@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
-import { environment } from '../../../../environments/environment';
-import { HttpClient } from '@angular/common/http';
-import { of, EMPTY, Observable, throwError, map, catchError } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {environment} from '../../../../environments/environment';
+import {HttpClient} from '@angular/common/http';
+import {catchError, EMPTY, map, Observable, of, throwError} from 'rxjs';
 import {
   CompromissoEditadoViewModel,
   CompromissoExcluidoViewModel,
@@ -12,11 +12,12 @@ import {
   VisualizarCompromissoViewModel,
 } from '../models/compromisso.models';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class CompromissoService {
   private readonly url: string = `${environment.apiUrl}/compromissos`;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   public inserir(
     registro: InserirCompromissoViewModel

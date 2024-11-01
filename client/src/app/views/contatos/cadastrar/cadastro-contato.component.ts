@@ -1,20 +1,14 @@
-import { NgIf, NgForOf } from '@angular/common';
-import { Component } from '@angular/core';
-import {
-  FormBuilder,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { Router, RouterLink } from '@angular/router';
-import { NotificacaoService } from '../../../core/notificacao/notificacao.service';
-import { ContatoService } from '../services/contato.service';
-import { ContatoInseridoViewModel } from '../models/contato.models';
-import { PartialObserver } from 'rxjs';
+import {NgForOf, NgIf} from '@angular/common';
+import {Component} from '@angular/core';
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators,} from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {Router, RouterLink} from '@angular/router';
+import {NotificacaoService} from '../../../core/notificacao/notificacao.service';
+import {ContatoService} from '../services/contato.service';
+import {ContatoInseridoViewModel} from '../models/contato.models';
 
 @Component({
   selector: 'app-cadastro-contato',

@@ -1,13 +1,13 @@
-import { NgIf, NgForOf, AsyncPipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { VisualizarContatoViewModel } from '../models/contato.models';
-import { NotificacaoService } from '../../../core/notificacao/notificacao.service';
-import { ContatoService } from '../services/contato.service';
+import {AsyncPipe, NgForOf, NgIf} from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {ActivatedRoute, Router, RouterLink} from '@angular/router';
+import {VisualizarContatoViewModel} from '../models/contato.models';
+import {NotificacaoService} from '../../../core/notificacao/notificacao.service';
+import {ContatoService} from '../services/contato.service';
 
 @Component({
   selector: 'app-exclusao-contato',
@@ -32,7 +32,8 @@ export class ExclusaoContatoComponent implements OnInit {
     private router: Router,
     private contatoService: ContatoService,
     private notificacaoService: NotificacaoService
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.detalhesContato = this.route.snapshot.data['contato'];

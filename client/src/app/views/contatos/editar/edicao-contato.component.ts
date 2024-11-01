@@ -1,23 +1,15 @@
-import { NgIf, NgForOf } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { PartialObserver } from 'rxjs';
-import { NotificacaoService } from '../../../core/notificacao/notificacao.service';
-import {
-  ContatoEditadoViewModel,
-  ContatoInseridoViewModel,
-} from '../models/contato.models';
-import { ContatoService } from '../services/contato.service';
+import {NgForOf, NgIf} from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators,} from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {ActivatedRoute, Router, RouterLink} from '@angular/router';
+import {PartialObserver} from 'rxjs';
+import {NotificacaoService} from '../../../core/notificacao/notificacao.service';
+import {ContatoEditadoViewModel,} from '../models/contato.models';
+import {ContatoService} from '../services/contato.service';
 
 @Component({
   selector: 'app-edicao-contato',

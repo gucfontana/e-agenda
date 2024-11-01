@@ -1,14 +1,14 @@
-import { NgIf, NgForOf } from '@angular/common';
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { Router, RouterLink } from '@angular/router';
-import { NotificacaoService } from '../../../core/notificacao/notificacao.service';
-import { CategoriaService } from '../services/categoria.service';
-import { CategoriaInseridaViewModel, InserirCategoriaViewModel } from '../models/categoria.models';
+import {NgForOf, NgIf} from '@angular/common';
+import {Component} from '@angular/core';
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {Router, RouterLink} from '@angular/router';
+import {NotificacaoService} from '../../../core/notificacao/notificacao.service';
+import {CategoriaService} from '../services/categoria.service';
+import {CategoriaInseridaViewModel, InserirCategoriaViewModel} from '../models/categoria.models';
 
 @Component({
   selector: 'app-cadastro-categoria',

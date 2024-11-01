@@ -3,7 +3,7 @@
     <div class="col col-md-10 col-lg-6">
       <h1 class="display-3">Cadastro de Compromisso</h1>
 
-      <hr />
+      <hr/>
 
       <form [formGroup]="form" (submit)="gravar()">
         <mat-form-field class="w-100 mt-5" appearance="fill">
@@ -18,10 +18,10 @@
           <mat-icon matSuffix color="primary">event</mat-icon>
           <mat-error class="text-white" *ngIf="assunto?.invalid">
             <span *ngIf="assunto?.errors?.['required']"
-              >O assunto precisa ser preenchido.</span
+            >O assunto precisa ser preenchido.</span
             >
             <span *ngIf="assunto?.errors?.['minlength']"
-              >O assunto deve conter ao menos 3 caracteres.</span
+            >O assunto deve conter ao menos 3 caracteres.</span
             >
           </mat-error>
         </mat-form-field>

@@ -1,13 +1,13 @@
-import { NgIf, NgForOf, AsyncPipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { VisualizarCategoriaViewModel } from '../models/categoria.models';
-import { CategoriaService } from '../services/categoria.service';
-import { NotificacaoService } from '../../../core/notificacao/notificacao.service';
+import {AsyncPipe, NgForOf, NgIf} from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {ActivatedRoute, Router, RouterLink} from '@angular/router';
+import {VisualizarCategoriaViewModel} from '../models/categoria.models';
+import {CategoriaService} from '../services/categoria.service';
+import {NotificacaoService} from '../../../core/notificacao/notificacao.service';
 
 @Component({
   selector: 'app-exclusao-categoria',
@@ -32,7 +32,8 @@ export class ExclusaoCategoriaComponent implements OnInit {
     private router: Router,
     private categoriaService: CategoriaService,
     private notificacaoService: NotificacaoService
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.detalhesCategoria = this.route.snapshot.data['categoria'];

@@ -1,6 +1,7 @@
 declare namespace Cypress {
   interface Chainable<Subject = any> {
     limparDados(): typeof limparDados;
+
     registrar(
       nome?: string,
       login?: string,
@@ -13,7 +14,7 @@ declare namespace Cypress {
 function limparDados(): void {
   const url = Cypress.env('apiUrl') + '/db/limpar';
 
-  fetch(url, { method: 'DELETE' }).then((resposta) => {
+  fetch(url, {method: 'DELETE'}).then((resposta) => {
     if (resposta.status === 200) {
       console.log('Dados limpos no banco de dados');
     } else {
